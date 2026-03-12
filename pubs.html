@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ── PRIMARY SEO ───────────────────────────────────────── -->
+    <title>Publications — Alexander Bailess | Oceanographer</title>
+    <meta name="description" content="Publications, conference presentations, and field research experience of Alexander Bailess, marine scientist at Oregon State University.">
+    <meta name="keywords" content="Alexander Bailess, Alex Bailess, Bailess, publications, ocean optics, phytoplankton, NOAA, VIIRS, PACE, harmful algal blooms, Oregon State University">
+    <meta name="author" content="Alexander Bailess">
+    <link rel="canonical" href="https://alexanderbailess.com/pubs.html">
+
+    <!-- ── OPEN GRAPH ────────────────────────────────────────── -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Publications — Alexander Bailess">
+    <meta property="og:description" content="Publications and presentations by Alexander Bailess, marine scientist at Oregon State University.">
+    <meta property="og:url" content="https://alexanderbailess.com/pubs.html">
+    <meta property="og:image" content="https://alexanderbailess.com/images/me_scuba.jpg">
+
+    <link rel="icon" href="/images/holdens_ceratirum.jpg" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy:       #0d2240;
+            --teal:       #00a99d;
+            --teal-light: #e0f5f3;
+            --sand:       #faf7f2;
+            --warm:       #e8602c;
+            --text:       #1c1c1e;
+            --muted:      #6b7280;
+            --border:     #e2ddd7;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            color: var(--text);
+            background: var(--sand);
+            line-height: 1.7;
+        }
+
+        /* ── HEADER ─────────────────────────────────────────── */
+        header {
+            position: relative;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+        }
+
+        .header-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('/images/kelp1.jpeg');
+            background-size: cover;
+            background-position: center 47%;
+            filter: brightness(0.85);
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            padding: 32px 48px 40px;
+        }
+
+        header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 0.01em;
+            line-height: 1.1;
+        }
+
+        header p {
+            font-family: 'DM Sans', sans-serif;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+            font-weight: 300;
+            color: rgba(255,255,255,0.8);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-top: 6px;
+        }
+
+        /* ── NAV ─────────────────────────────────────────────── */
+        nav {
+            background: var(--navy);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 0 32px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.72);
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 16px 14px;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--teal);
+            border-bottom-color: var(--teal);
+        }
+
+        /* ── LAYOUT ──────────────────────────────────────────── */
+        main {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        section {
+            padding: 64px 0 0;
+        }
+
+        section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 32px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* ── PUBLICATION CARDS ───────────────────────────────── */
+        .pub-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .pub-card {
+            background: white;
+            border-radius: 6px;
+            padding: 24px 28px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
+            transition: box-shadow 0.2s;
+        }
+
+        .pub-card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .pub-card .pub-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+
+        .pub-card .pub-title a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .pub-card .pub-title a:hover {
+            color: var(--teal);
+            border-bottom-color: var(--teal);
+        }
+
+        .pub-card .pub-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            background: var(--teal-light);
+            color: var(--teal);
+            border-radius: 3px;
+            padding: 2px 8px;
+            margin-bottom: 10px;
+        }
+
+        .pub-card .pub-authors {
+            font-size: 0.88rem;
+            color: var(--muted);
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+
+        .pub-card .pub-authors strong {
+            color: var(--text);
+        }
+
+        .pub-card .pub-meta {
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+
+        .pub-card .pub-meta span {
+            margin-right: 16px;
+        }
+
+        /* ── PRESENTATIONS ───────────────────────────────────── */
+        .pres-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .pres-item {
+            padding: 22px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pres-item:last-child {
+            border-bottom: none;
+        }
+
+        .pres-item .pres-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.08rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+
+        .pres-item .pres-title a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px dotted var(--teal);
+            transition: color 0.2s;
+        }
+
+        .pres-item .pres-title a:hover {
+            color: var(--teal);
+        }
+
+        .pres-item .pres-venue {
+            font-size: 0.85rem;
+            color: var(--warm);
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .pres-item .pres-authors {
+            font-size: 0.85rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .pres-item .pres-authors strong {
+            color: var(--text);
+        }
+
+        /* ── FIELD EXPERIENCE ────────────────────────────────── */
+        .cruise-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .cruise-item {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 12px 24px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+            align-items: start;
+        }
+
+        .cruise-item:last-child {
+            border-bottom: none;
+        }
+
+        .cruise-name {
+            font-weight: 500;
+            color: var(--navy);
+            font-size: 0.95rem;
+        }
+
+        .cruise-desc {
+            font-size: 0.88rem;
+            color: var(--muted);
+            grid-column: 1;
+            margin-top: 2px;
+        }
+
+        .cruise-year {
+            font-size: 0.82rem;
+            color: var(--muted);
+            font-weight: 500;
+            white-space: nowrap;
+            padding-top: 2px;
+        }
+
+        /* ── FOOTER ──────────────────────────────────────────── */
+        footer {
+            background: var(--navy);
+            color: rgba(255,255,255,0.45);
+            text-align: center;
+            padding: 24px;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            margin-top: 80px;
+        }
+
+        /* ── RESPONSIVE ──────────────────────────────────────── */
+        @media (max-width: 680px) {
+            .header-content { padding: 24px 24px 32px; }
+            nav { padding: 0 16px; }
+            .cruise-item { grid-template-columns: 1fr; }
+            .cruise-year { grid-column: 1; margin-top: -8px; }
+        }
+
+        /* ── FADE-IN ─────────────────────────────────────────── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        section { animation: fadeUp 0.45s ease both; }
+        section:nth-child(1) { animation-delay: 0.05s; }
+        section:nth-child(2) { animation-delay: 0.12s; }
+        section:nth-child(3) { animation-delay: 0.19s; }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-bg"></div>
+        <div class="header-content">
+            <h1>Alexander Bailess</h1>
+            <p>Oceanographer &nbsp;·&nbsp; Oregon State University</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html#about">About</a>
+        <a href="index.html#research">Research</a>
+        <a href="pubs.html#publications" class="active">Publications</a>
+        <a href="pubs.html#presentations">Presentations</a>
+        <a href="pubs.html#field">Research Cruises</a>
+    </nav>
+
+    <main>
+
+        <!-- ── PUBLICATIONS ──────────────────────────────────── -->
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="pub-list">
+
+                <div class="pub-card">
+                    <div class="pub-badge">Preprint — bioRxiv</div>
+                    <div class="pub-title">
+                        <a href="https://doi.org/10.64898/2026.02.24.707776" target="_blank" rel="noopener noreferrer">
+                            Phytoplankton Fingerprints: <em>Pseudo-nitzschia</em> in the Northeast Pacific
+                        </a>
+                    </div>
+                    <div class="pub-authors"><strong>Bailess, A.</strong>, Baetge, N., Barnard, A., Tufillaro, N., Behrenfeld, M., Bill, B., Kudela, R., Graff, J., Kavanaugh, M.</div>
+                    <div class="pub-meta">
+                        <span>bioRxiv 2026.02.24.707776</span>
+                        <span>February 2026</span>
+                    </div>
+                </div>
+
+                <div class="pub-card">
+                    <div class="pub-badge">MS Thesis</div>
+                    <div class="pub-title">
+                        <a href="/pdfs/Bailess_thesis.pdf" target="_blank" rel="noopener noreferrer">
+                            Hyperspectral Remote Sensing for Harmful Algal Bloom Detection: <em>Pseudo-nitzschia</em> in the Northeast Pacific
+                        </a>
+                    </div>
+                    <div class="pub-authors"><strong>Bailess, Alexander</strong></div>
+                    <div class="pub-meta">
+                        <span>Oregon State University — CEOAS</span>
+                        <span>May 2025</span>
+                    </div>
+                </div>
+
+                <div class="pub-card">
+                    <div class="pub-badge">NOAA Technical Report</div>
+                    <div class="pub-title">
+                        <a href="/pdfs/JPSS_VIIRS_Pensacola_2023.pdf" target="_blank" rel="noopener noreferrer">
+                            Report for Dedicated JPSS VIIRS Ocean Color Cal/Val Cruise: U.S. West Coastal Ocean, March 2023
+                        </a>
+                    </div>
+                    <div class="pub-authors">
+                        Ondrusek, M.; Wei, J.; Wang, M.; Stengel, E.; Kovach, C.; Gilerson, A.; Goes, J.I.;
+                        Hu, C.; Ladner, S.; Tufillaro, N.; Voss, K.J.; <strong>Bailess, A.</strong>; Barnard, A.;
+                        Blocker, R.; Bunson, S.; Cannizzaro, J.; English, D.; Gomes, H.R.; Herrera, E.; Jordan, J.;
+                        Kavanaugh, M.; Malinowski, M.; Moretto, W.; Sullivan, S.
+                    </div>
+                    <div class="pub-meta">
+                        <span>NOAA Technical Report NESDIS 163</span>
+                        <span>2025</span>
+                    </div>
+                </div>
+
+                <div class="pub-card">
+                    <div class="pub-badge">NOAA Technical Report</div>
+                    <div class="pub-title">
+                        <a href="/pdfs/JPSS_VIIRS_Hawaii_2022.pdf" target="_blank" rel="noopener noreferrer">
+                            Report for Dedicated JPSS VIIRS Ocean Color Cal/Val Cruise: Hawaii, March 2022
+                        </a>
+                    </div>
+                    <div class="pub-authors">
+                        Ondrusek, M.; Wei, J.; Wang, M.; Stengel, E.; Kovach, C.; Gilerson, A.; Herrera, E.;
+                        Malinowski, M.; Goes, J.I.; Wu, J.; Gomes, H.R.; Hu, C.; Cannizzaro, J.; English, D.;
+                        Shi, J.; Yao, Y.; Ladner, S.; Mannino, A.; Chaves, J.E.; Farr, D.P.; Freeman, S.A.;
+                        Smith, H.D.; Tufillaro, N.; <strong>Bailess, A.</strong>; Belmonte, A.; Barnard, A.;
+                        Tan, J.; Frouin, R.
+                    </div>
+                    <div class="pub-meta">
+                        <span>NOAA Technical Report NESDIS 160</span>
+                        <span>2024</span>
+                    </div>
+                </div>
+
+                <div class="pub-card">
+                    <div class="pub-badge">Journal Article</div>
+                    <div class="pub-title">
+                        <a href="https://doi.org/10.1016/j.palaeo.2022.111249" target="_blank" rel="noopener noreferrer">
+                            Calibrating bulk and amino acid δ¹³C and δ¹⁵N isotope ratios between mollusk soft tissue and shell for reconstructing paleoceanographic and paleoecological archives
+                        </a>
+                    </div>
+                    <div class="pub-authors">Vokhshoori, N., Tipple, B., <strong>Bailess, A.</strong>, McCarthy, M.D.</div>
+                    <div class="pub-meta">
+                        <span>Palaeogeography, Palaeoclimatology, Palaeoecology, 606, 111249</span>
+                        <span>2022</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── PRESENTATIONS ──────────────────────────────────── -->
+        <section id="presentations">
+            <h2>Conference Presentations</h2>
+            <div class="pres-list">
+
+                <div class="pres-item">
+                    <div class="pres-title">HyperNav: A Novel Use of NAVIS Autonomous Profiling Floats for System Vicarious Calibration of the NASA PACE Ocean Colour Instrument</div>
+                    <div class="pres-venue">Euro-Argo Science Meeting 2025</div>
+                    <div class="pres-authors">Banks, A., Barnard, A., Haëntjens, N., Boss, E., Frouin, R., Tan, J., Spyridakis, N., <strong>Bailess, A.</strong>, Chamberlain, P., Mazloff, M.</div>
+                </div>
+
+                <div class="pres-item">
+                    <div class="pres-title">System Vicarious Calibration of the PACE Ocean Color Instrument</div>
+                    <div class="pres-venue">European Geosciences Union 2025</div>
+                    <div class="pres-authors">Frouin, R., Tan, J., <strong>Bailess, A.</strong>, Barnard, A., Boss, E., Haëntjens, N., Banks, A., Chamberlain, P., Mazloff, M.</div>
+                </div>
+
+                <div class="pres-item">
+                    <div class="pres-title">
+                        <a href="/pdfs/Unique_Hyperspectral_Fingerprints_of_Diatoms_OO24.pdf" target="_blank" rel="noopener noreferrer">
+                            Unique Hyperspectral Fingerprints of Diatoms
+                        </a>
+                    </div>
+                    <div class="pres-venue">Ocean Optics — October 2024, Spain</div>
+                    <div class="pres-authors"><strong>Bailess, A.</strong>, Baetge, N., Bill, B., Barnard, A., Behrenfeld, M., Graff, J., George, K., Tufillaro, N., Kavanaugh, M.</div>
+                </div>
+
+                <div class="pres-item">
+                    <div class="pres-title">Initial Matchups from the HyperNAV Vicarious Calibration Network and the PACE Ocean Color Instrument</div>
+                    <div class="pres-venue">Ocean Optics — October 2024, Spain</div>
+                    <div class="pres-authors">Barnard, A., Boss, E., Frouin, R., Haëntjens, N., Tan, J., Craig, S., Sirk, E., <strong>Bailess, A.</strong>, Chamberlain, P.</div>
+                </div>
+
+                <div class="pres-item">
+                    <div class="pres-title">Phytoplankton 'Fingerprints'</div>
+                    <div class="pres-venue">State of the Coast 2024 — Seaside, OR · Oregon Sea Grant</div>
+                    <div class="pres-authors"><strong>Bailess, A.</strong>, Baetge, N., Bill, B., Barnard, A., Behrenfeld, M., Graff, J., George, K., Tufillaro, N., Kavanaugh, M.</div>
+                </div>
+
+                <div class="pres-item">
+                    <div class="pres-title">Light in the Sea: Investigating Oregon's Nearshore Plankton through Ocean Color</div>
+                    <div class="pres-venue">Hatfield Awards Ceremony 2024</div>
+                    <div class="pres-authors"><strong>Bailess, A.</strong>, Kavanaugh, M.</div>
+                </div>
+
+                <div class="pres-item">
+                    <div class="pres-title">Combining Hyperspectral and eDNA Measurements: Looking for Relations between Biodiversity at Multiple Trophic Levels and Remote Sensing</div>
+                    <div class="pres-venue">American Geophysical Union 2023</div>
+                    <div class="pres-authors">Chavez, F., Messié, M., Pitz, K., Baker, J., <strong>Bailess, A.</strong></div>
+                </div>
+
+                <div class="pres-item">
+                    <div class="pres-title">A Fresh Take on Phyto: Hydrologic Variability's Effect on Phytoplankton Bloom Dynamics</div>
+                    <div class="pres-venue">Ocean Sciences Meeting 2022</div>
+                    <div class="pres-authors"><strong>Bailess, A.</strong>, Eddy, T., Nejad, E., Fritsch, J., Schraga, T.</div>
+                </div>
+
+                <div class="pres-item">
+                    <div class="pres-title">Where are the Blooms? — Estuaries as Hot-spots of Microbial Carbon and Nitrogen Cycling</div>
+                    <div class="pres-venue">Ocean Sciences Meeting 2022</div>
+                    <div class="pres-authors">Eddy, T., <strong>Bailess, A.</strong>, Nejad, E., Schraga, T.</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── FIELD EXPERIENCE ───────────────────────────────── -->
+        <section id="field">
+            <h2>Research Cruises</h2>
+            <div class="cruise-list">
+
+                <div class="cruise-item">
+                    <div>
+                        <div class="cruise-name">Tara Coral — S/V Tara</div>
+                        <div class="cruise-desc">Calibration and validation of satellite products and testing of new instrumentation, 1.5 months — transatlantic NASA PACE mission</div>
+                    </div>
+                    <div class="cruise-year">2025</div>
+                </div>
+
+                <div class="cruise-item">
+                    <div>
+                        <div class="cruise-name">VIIRS Cal/Val — R/V Ruben Lasker</div>
+                        <div class="cruise-desc">Spectral data collection on red tides and satellite product validation, 14 days</div>
+                    </div>
+                    <div class="cruise-year">2025</div>
+                </div>
+
+                <div class="cruise-item">
+                    <div>
+                        <div class="cruise-name">VIIRS Cal/Val — R/V Nancy Foster</div>
+                        <div class="cruise-desc">HyperPro, open-source radiometers, and Inline system deployment, 12 days — satellite product calibration/validation</div>
+                    </div>
+                    <div class="cruise-year">2024</div>
+                </div>
+
+                <div class="cruise-item">
+                    <div>
+                        <div class="cruise-name">Northern California Current Survey — R/V Shimada</div>
+                        <div class="cruise-desc">Dilution experiments, Inline system operations, 18 days — monitoring nearshore commercial fish species' recruitment success</div>
+                    </div>
+                    <div class="cruise-year">2023</div>
+                </div>
+
+                <div class="cruise-item">
+                    <div>
+                        <div class="cruise-name">Kelp Forest Ecology — R/V Pugettia</div>
+                        <div class="cruise-desc">SCUBA surveys of nearshore Oregon kelp forests; stereo video, fish/kelp/invert transects, eDNA — day trips, bimonthly</div>
+                    </div>
+                    <div class="cruise-year">2023 – Present</div>
+                </div>
+
+                <div class="cruise-item">
+                    <div>
+                        <div class="cruise-name">HyperNAV — F/V Graphic Slayer</div>
+                        <div class="cruise-desc">HyperNAV deployments, day trips, several per year — satellite product calibration/validation</div>
+                    </div>
+                    <div class="cruise-year">2023 – Present</div>
+                </div>
+
+                <div class="cruise-item">
+                    <div>
+                        <div class="cruise-name">VIIRS Cal/Val — R/V Shimada</div>
+                        <div class="cruise-desc">HyperNAV and HyperPro deployments, 10 days — satellite product calibration/validation</div>
+                    </div>
+                    <div class="cruise-year">2023</div>
+                </div>
+
+                <div class="cruise-item">
+                    <div>
+                        <div class="cruise-name">VIIRS Cal/Val — R/V Oscar Elton Sette</div>
+                        <div class="cruise-desc">HyperNAV and HyperPro deployments, 11 days — satellite product calibration/validation</div>
+                    </div>
+                    <div class="cruise-year">2022</div>
+                </div>
+
+                <div class="cruise-item">
+                    <div>
+                        <div class="cruise-name">Monterey Bay Time Series — R/V Rachel Carson</div>
+                        <div class="cruise-desc">Apparent optical properties, eDNA, monthly cruises — Monterey Bay Long Term Ecological Time Series</div>
+                    </div>
+                    <div class="cruise-year">2021 – 2022</div>
+                </div>
+
+                <div class="cruise-item">
+                    <div>
+                        <div class="cruise-name">San Francisco Bay USGS Time Series — R/V Peterson</div>
+                        <div class="cruise-desc">CTD, nutrient, chlorophyll, SPM; 1–3 monthly cruises — San Francisco Bay Long Term Ecological Time Series</div>
+                    </div>
+                    <div class="cruise-year">2020 – 2022</div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Alexander Bailess &nbsp;·&nbsp; Oceanographer</p>
+    </footer>
+</body>
+</html>
